@@ -24,7 +24,15 @@ var server = http.createServer(function (request, response) {
     if (path === '/') {
         response.statusCode = 200
         response.setHeader('Content-Type', 'text/html;charset=utf-8')
-        response.write(`<h1>我是帅哥</>`)
+        response.write(`
+        <!DOCTYPE html>
+        <head>
+        <link rel="stylesheet" href="/x">
+        </head>
+        <bode>
+        <h1>我咋这么帅呢</h1>
+        </body>
+        `)
         response.end()
     } else if (path === '/x') {
         response.statusCode = 200
